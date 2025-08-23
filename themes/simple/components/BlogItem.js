@@ -63,7 +63,7 @@ export const BlogItem = props => {
                 <SmartLink
                   className='p-1 hover:text-red-400 transition-all duration-200'
                   href={`/archive#${formatDateFmt(post?.publishDate, 'yyyy-MM')}`}>
-                  <i className='fa-regular fa-clock' />{' '}
+                  <i className='fa-regular fa-clock' /> { post.publishDay || formatDateFmt(post?.publishDate, 'yyyy-MM-DD')}
                   {post.date?.start_date || post.createdTime}
                 </SmartLink>
               </span>
